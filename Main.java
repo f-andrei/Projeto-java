@@ -85,13 +85,22 @@ public class Main {
                     if (opcaoVisualizar == 1) {
                         System.out.println("Digite o id do cliente: ");
                         int id = sc.nextInt();
-                        Cliente clienteId = clientes.get(id);
-                        System.out.println("Visualizando cliente " + clienteId.toString());
+                        for (Cliente clienteId : clientes) {
+                            System.out.println(clienteId.getId());
+                            if (clienteId.getId() == id) {
+                                System.out.println("Visualizando cliente " + clienteId.toString());
+                                break;
+                            }
+                        }
                     } else if (opcaoVisualizar == 2) {
                         System.out.println("Digite o id do entregador: ");
                         int id = sc.nextInt();
-                        Entregador entregador = entregadores.get(id);
-                        System.out.println("Visualizando entregador " + entregador.toString());
+                        for (Entregador entregadorId : entregadores) {
+                            if (entregadorId.getId() == id) {
+                                System.out.println("Visualizando entregador " + entregadorId.toString());
+                                break;
+                            }
+                        }
                     } else {
                         System.out.println("Opção inválida!");
                     }
