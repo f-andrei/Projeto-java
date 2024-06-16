@@ -5,6 +5,13 @@ public class Cliente extends Pessoa {
     private String email;
     ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
 
+    public Cliente() {}
+
+    public Cliente(int id, String nome, String cpf, String telefone, String endereco, String email) {
+        super(id, nome, cpf, telefone);
+        this.endereco = endereco;
+        this.email = email;
+    }
     public String getEndereco() {
         return endereco;
     }

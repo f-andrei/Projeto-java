@@ -7,6 +7,13 @@ public class Pedido {
     ArrayList<itemPedido> itens = new ArrayList<itemPedido>();
     private double precoTotal;
 
+    public Pedido() {}
+
+    public Pedido(Restaurante restaurante, Cliente cliente) {
+        this.restaurante = restaurante;
+        this.cliente = cliente;
+    }
+
     public Restaurante getRestaurante() {
         return restaurante;
     }
